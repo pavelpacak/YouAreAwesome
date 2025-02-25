@@ -15,7 +15,7 @@ struct ContentView: View {
     var body: some View {
         
         VStack {
-               
+            
             Text(message)
                 .font(.largeTitle)
                 .fontWeight(.heavy)
@@ -41,20 +41,9 @@ struct ContentView: View {
                                 "You Are Fantastic!",
                                 "You Swifty!",
                                 "You Are a Code Monster!"]
+                message = messages[Int.random(in: 0..<messages.count)]
                 
-                message = messages[messageNumber]
-                messageNumber += 1
-                
-                if messageNumber == messages.count {
-                    messageNumber = 0
-                }
-                
-                imageName = "image\(imageNumber)"
-                imageNumber += 1
-                
-                if imageNumber > 9 {
-                    imageNumber = 0
-                }
+                imageName = "image\(Int.random(in: 0...9))"
             }
             .buttonStyle(.borderedProminent)
             .font(.title2)
