@@ -87,7 +87,6 @@ struct ContentView: View {
         .padding()
     }
     
-    
     func nonRepeatingRandom(lastNumber: Int, upperBound: Int) -> Int {
         var newNumber: Int
         repeat {
@@ -95,7 +94,6 @@ struct ContentView: View {
         } while newNumber == lastNumber
         return newNumber
     }
-    
     
     func playSound(soundName: String) {
         if audioPlayer != nil && audioPlayer.isPlaying {
@@ -114,7 +112,6 @@ struct ContentView: View {
             print("😡 ERROR: \(error.localizedDescription) creating audioPlayer")
         }
     }
-    
     
 }
 
